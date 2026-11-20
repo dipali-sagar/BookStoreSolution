@@ -1,0 +1,66 @@
+@hostname = localhost
+@port = 5087
+@WebApplication1_HostAddress = https://{{hostname}}:{{port}}
+
+### Get All Books (Default)
+GET {{WebApplication1_HostAddress}}/books
+Accept: application/json
+
+### Get Books with Eager Loading
+GET {{WebApplication1_HostAddress}}/books?type=eager
+Accept: application/json
+
+### Get Books with Lazy Loading
+GET {{WebApplication1_HostAddress}}/books?type=lazy
+Accept: application/json
+
+### Get Books via Stored Procedure
+GET {{WebApplication1_HostAddress}}/books?type=sp
+Accept: application/json
+
+### Get Trashed (Recycled) Books
+GET {{WebApplication1_HostAddress}}/books/trashed
+Accept: application/json
+
+### Get a Specific Book by ID
+GET {{WebApplication1_HostAddress}}/books/1
+Accept: application/json
+
+### Create a New Book
+POST {{WebApplication1_HostAddress}}/books
+Content-Type: application/json
+
+{
+  "title": "The Great Gatsby",
+  "authorId": 1,
+  "isbn": "978-0743273565",
+  "price": 15.99
+}
+
+### Update a Book (Default)
+PUT {{WebApplication1_HostAddress}}/books
+Content-Type: application/json
+
+{
+  "id": 1,
+  "title": "The Great Gatsby - Updated Edition",
+  "authorId": 1,
+  "isbn": "978-0743273565",
+  "price": 12.99
+}
+
+### Update a Book via Raw SQL
+PUT {{WebApplication1_HostAddress}}/books?type=sql
+Content-Type: application/json
+
+{
+  "id": 1,
+  "title": "The Great Gatsby - SQL Update",
+  "authorId": 1
+}
+
+### Delete a Book
+DELETE {{WebApplication1_HostAddress}}/books/1
+
+### Restore a Trashed Book
+POST {{WebApplication1_HostAddress}}/books/restore/1

@@ -1,0 +1,43 @@
+{
+  "title": "Advanced Microservices in .NET 10",
+  "isbn": "978-1-234-56789-0",
+  "price": 59.99,
+  "description": "A comprehensive guide to building scalable, vector-powered microservices using modern C#.",
+  "newPublisher": {
+    "name": "O'Reilly Media Technical",
+    "establishedYear": 1980,
+    "headquarters": "Sebastopol, California",
+    "websiteUrl": "https://www.oreilly.com",
+    "description": "Technical book publishing company."
+  },
+  "bookDetails": {
+    "numberOfPages": 450,
+    "numberOfChapters": 15,
+    "format": "Hardcover",
+    "language": "English",
+    "itemWeightInGrams": 850
+  },
+  "existingAuthorMappings": [
+    {
+      "authorId": 1,
+      "authorOrder": 2,
+      "contributionRole": "Co-Author",
+      "description": "Provided chapters on Data Access and Entity Framework Core."
+    }
+  ],
+  "newAuthorMappings": [
+    {
+      "authorOrder": 1,
+      "contributionRole": "Lead Author",
+      "description": "Architected the book structure and wrote the core microservices content.",
+      "author": {
+        "firstName": "Jane",
+        "lastName": "Doe",
+        "email": "jane.doe@example.com",
+        "expertise": "Distributed Systems & Cloud Architecture",
+        "biography": "Jane is a Principal Architect with 15 years of experience in .NET ecosystem.",
+        "websiteUrl": "https://janedoe.dev"
+      }
+    }
+  ]
+}
