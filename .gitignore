@@ -1,7 +1,33 @@
-echo "# BookStoreSolution" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/dipali-sagar/BookStoreSolution.git
-git push -u origin main
+
+# Node dependencies
+node_modules/
+**/node_modules/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# React build files
+build/
+dist/
+**/build/
+**/dist/
+# Logs
+*.log
+npm-debug.log*
+
+# IDE settings
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test coverage
+coverage/
+
+# Cache
+.cache/
+.parcel-cache/
